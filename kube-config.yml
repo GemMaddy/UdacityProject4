@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  web:
+    image: housepred
+    ports:
+      - "3000:3000"
+
+  words:
+    image: housepred
+    deploy:
+      replicas: 5
+      endpoint_mode: dnsrr
+      resources:
+        limits:
+          memory: 50M
+        reservations:
+          memory: 50M

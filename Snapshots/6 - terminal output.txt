@@ -1,0 +1,19 @@
+WINDOW 1
+=================================
+λ kubectl port-forward pods/housepredapp 8090:80
+Forwarding from 127.0.0.1:8090 -> 80
+Forwarding from [::1]:8090 -> 80
+Handling connection for 8090
+Handling connection for 8090
+Handling connection for 8090
+
+
+WINDOW 2
+=================================
+λ bash make_prediction.sh
+Port: 8090
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
